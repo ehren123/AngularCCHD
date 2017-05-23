@@ -1,0 +1,96 @@
+﻿<div class="ui container">
+    <!--Status information-->
+    <div class="ui row">
+        <h4 class="ui dividing header">Status:</h4>
+        <div class="ui segment">
+            <!--cchdResultComponent-->
+            <app-cchd-result></app-cchd-result>
+        </div>
+    </div>
+    <br/>
+    <!--Main section-->
+    <div class="ui row">
+        <div id="firstCheck">
+            <h4 class="ui dividing header">Initial screen: </h4>
+            <div class="ui form">
+                <div class="fields">
+                    <div class="field">
+                        <label>R hand</label>
+                        <input
+                               type="text"
+                               placeholder="R hand"
+                               (keyup)="onChangeHandOne(handOne.value)" 
+                               #handOne
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                    <div class="field">
+                        <label>Foot</label>
+                        <input type="text" 
+                               placeholder="Foot"
+                               (keyup)="onChangeFootOne(footOne.value)" 
+                               #footOne
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="secondCheck" *ngIf="_hasSecondTest">
+            <h4 class="ui dividing header">First repeat: </h4>
+            <div class="ui form">
+                <div class="fields">
+                    <div class="field">
+                        <label>R hand</label>
+                        <input type="text" 
+                               placeholder="R hand"
+                               (keyup)="onChangeHandTwo(handTwo.value)" 
+                               #handTwo
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                    <div class="field">
+                        <label>Foot</label>
+                        <input type="text" 
+                               placeholder="Foot"
+                               (keyup)="onChangeFootTwo(footTwo.value)" 
+                               #footTwo
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="thirdCheck" *ngIf="_hasThirdTest">
+            <h4 class="ui dividing header">Second repeat: </h4>
+            <div class="ui form">
+                <div class="fields">
+                    <div class="field">
+                        <label>R hand</label>
+                        <input type="text" 
+                               placeholder="R hand"
+                               (keyup)="onChangeHandThree(handThree.value)" 
+                               #handThree
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                    <div class="field">
+                        <label>Foot</label>
+                        <input type="text" 
+                               placeholder="Foot"
+                               (keyup)="onChangeFootThree(footThree.value)"
+                               #footThree
+                               onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+</div>
+
+
+
