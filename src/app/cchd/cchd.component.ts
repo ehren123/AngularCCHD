@@ -55,8 +55,8 @@ export class CchdComponent {
     private _isHandThreeValid: boolean = false;
     private _isFootThreeValid: boolean = false;
 
-    private _hasSecondTest: boolean = false;
-    private _hasThirdTest: boolean = false;
+    hasSecondTest: boolean = false;
+    hasThirdTest: boolean = false;
 
      constructor(private _cchdEvalService: CchdEvalService) {
         // Add iterations to array.
@@ -161,8 +161,8 @@ export class CchdComponent {
     // Adjust number of fields according to current action.
     private updateInputs(){
         // Show additional fields when first or second test status is inconclusive.
-        this._hasSecondTest = this._screenIterationModels[0].isInconclusive();
-        this._hasThirdTest = this._screenIterationModels[1].isInconclusive();
+        this.hasSecondTest = this._screenIterationModels[0].isInconclusive();
+        this.hasThirdTest = this._screenIterationModels[1].isInconclusive();
     }
 
 }
